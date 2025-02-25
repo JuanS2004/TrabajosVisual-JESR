@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Editor de Contenido</title>
+</head>
+
+<body>
+    <div class="container mt-4">
+        <div class="mt-4 p-5 bg-primary text-white rounded">
+            <h1>Crea tu página de contenido</h1>
+        </div>
+
+        <div class="row mt-4">
+            <!-- Menú lateral -->
+            <div class="col-3">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" onclick="nuevoTitulo()">Título</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="nuevoParrafo()">Párrafo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Imagen</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="nuevoEnlace()">Enlace</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="imprimir()">Imprimir</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Área de edición -->
+            <div class="col-8">
+                <!-- Un div de tipo fila (row) con un textarea -->
+                <div class="row">
+                    <textarea id="texto" rows="8" class="form-control"></textarea>
+                </div>
+                <!-- Un div de tipo fila (row) con un input de tipo file -->
+                <div class="row mt-3">
+                    <input type="file" id="imagen" class="form-control">
+                </div>
+                <!-- Un div con una clase card y un id contenido -->
+                <div class="card mt-3 p-3" id="contenido"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS y contenido.js -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/contenido.js"></script>
+</body>
+
+</html>
